@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .main-body-style {
+            width: 100vw
+        }
+
+        .nav-bar{
+            height: 50px;
+            width: 100%;
+            background-color: #f5f5f5;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+            box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, .25);
+        }
+
+        .mobile-options-button {
+            display: none;
+        }
+
+        .search-bar {
+            width: 400px;
+            height: 30px;
+            border-radius: 25px;
+            font-family: 'Segoe UI';
+            font-weight: bold;
+            border: 0px thin black;
+        }
+
+        .search-button {
+            margin: 0px 0px 0px 15px;
+            height: 35px;
+            width: 80px;
+            background-color: white;
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+
+        .sign-up-button {
+            margin: 0px 0px 0px 15px;
+            height: 35px;
+            width: 80px;
+            background-color: white;
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+
+        .sign-in-button {
+            margin: 0 15px 0 15px;
+            height: 35px;
+            width: 80px;
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+
+        .udemy-logo {
+            width: 100px;
+            height:35px;
+            padding-right: 20px;
+        }
+
+        .header-area {
+            width: 100vw;
+            background-color: #f8f9fb;
+            height:400px;
+            background-image: url("https://img-c.udemycdn.com/notices/web_banner/slide_1_image_udlite/b8f46419-eca3-44c1-8ba0-ed2ca89f8884.jpg");
+            background-repeat: no-repeat;
+            background-position: 95% 40px;
+            padding-top: 120px;
+
+        }
+
+        .header-box {
+            background-color: white;
+            height:170px;
+            width:300px;
+            padding: 10px 0px 0px 15px;
+            box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, .45);
+            margin-left: 85px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .course-types {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            height: 60px;
+            padding-left: 70px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .course-summary {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 60px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .course-descriptions {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .course-element {
+            width: 250px;
+        }
+
+        @media screen and (max-width: 875px) {
+            .search-bar {
+                display: none;
+            }
+
+            .mobile-options-button {
+                display: block;
+            }
+
+            .search-button {
+                display: none;
+            }
+
+            .nav-bar{
+                background-color: #f5f5f5;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding:  0px 10px 0px 10px;
+            }
+
+            .sign-up-button {
+                display:none;
+            }
+
+            .sign-in-button {
+                display:none;
+            }
+
+            .udemy-logo {
+                margin-left: auto;
+                order:2;
+            }
+
+            .header-area {
+                width: 100vw;
+                background-color: #f8f9fb;
+                height:540px;
+                background-image: url("https://img-c.udemycdn.com/notices/web_banner/slide_1_image_udlite/b8f46419-eca3-44c1-8ba0-ed2ca89f8884.jpg");
+                background-repeat: no-repeat;
+                background-position: 80% 180px;
+                padding-top: 30px;
+            }
+
+            .header-box {
+                margin-left: 20px;
+                width: 400px;
+            }
+            .course-descriptions {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+            }
+        }
+
+
+    </style>
+
+    <head>
+        <meta http-equiv="refresh" content="2" >
+        <meta charset="UTF-8">
+        <title>Udemy-Like Website</title>
+    </head>
+    <body class="main-body-style">
+        <div class="nav-bar">
+            <p class="mobile-options-button">☰</p>
+            <img href="" class="udemy-logo" alt="Udemy Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/512px-Udemy_logo.svg.png">
+            <form action="">
+                <input class="search-bar" type="text" placeholder="🔎 Search for anything">
+                <input type="submit" class="search-button" value="Search">
+            </form>
+            <div style="margin-left:auto;">
+                <input type="button" class="sign-up-button" value="Sign Up">
+                <input type="button" class="sign-in-button" value="Sign In">
+
+            </div>
+        </div>
+        <div class="header-area">
+            <div class="header-box">
+                <h1>New to Udemy? Lucky you.</h1>
+                <p>Courses start at E£169.99. Get your new-student offer before it expires.</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="course-types">
+                <h3>Python</h3>
+                <h4>Excel</h3>
+                <h4>Web Development</h3>
+                <h4>Javascript</h3>
+                <h4>Drawing</h3>
+            </div>
+            <div class="course-summary">
+                <h2>Expand your career opportunities with Python</h2>
+                <p>
+                    Take one of Udemy’s range of Python courses and learn how to
+                    code using this incredibly useful language. Its simple syntax
+                    and readability makes Python perfect for Flask, Django, data science,
+                    and machine learning. You’ll learn how to build everything from games
+                    to sites to apps. Choose from a range of courses that will appeal to both
+                    beginners and advanced developers alike.
+                </p>
+                <br>
+                <br>
+                <div class="course-descriptions">
+                    <div class="course-element">
+                        <img alt="Python Course Logo" src="https://img-c.udemycdn.com/course/240x135/394676_ce3d_5.jpg">
+                        <h3>Learn Python Programming</h3>
+                        <p>Author 1</p>
+                        <h4>E£199.99</h4>
+                    </div>
+                    <div class="course-element">
+                        <img alt="Python Course Logo" src="https://img-c.udemycdn.com/course/240x135/396876_cc92_7.jpg">
+                        <h3>Learning Python</h3>
+                        <p>Author 2</p>
+                        <h4>E£269.99</h4>
+                    </div>
+                    <div class="course-element">
+                        <img alt="Python Course Logo" src="https://img-c.udemycdn.com/course/240x135/405878_e5a0_3.jpg">
+                        <h3>Python for beginners</h3>
+                        <p>Author 3</p>
+                        <h4>E£199.99</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
