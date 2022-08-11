@@ -120,6 +120,9 @@
     flex-direction: row;
     gap: 20px;
     height: 60px;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 0px 0px 4px 0px;
 }
 
 .courses-overview {
@@ -137,7 +140,7 @@
 }
 
 .course-list {
-    padding: 15px 15px 15px 40px;
+    padding: 15px 0px 15px 0px;
     display: flex;
     flex-direction: row;
     width: 90%;
