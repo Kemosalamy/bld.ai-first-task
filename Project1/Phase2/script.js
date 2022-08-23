@@ -1,4 +1,25 @@
-fetch('http://localhost:3000/courses')
+
+
+const fetchurl = 'http://localhost:3000/courses'
+
+
+const createCourseHTML = (image,title,author,price) => {
+    let CourseHTML = `
+    <div class="course-element">
+        <img class="course-logo" alt="Course Logo" src="` + image + `">
+        <br>
+        <label style="font-weight: bold; font-size: 18px">` + title + `</label>
+        <label style="font-weight: lighter">` + author + `</label>
+        <label style="font-weight: bold; font-size: 15px">` + price + `</label>
+    </div>
+    `;
+
+    return CourseHTML;
+}
+
+
+
+fetch(fetchurl)
 .then(res => res.json())
 .then((json) => {
 
@@ -9,15 +30,7 @@ fetch('http://localhost:3000/courses')
         let author = value["author"];
         let price = value["price"];
 
-        let CourseHTML = `
-        <div class="course-element">
-            <img width="240" height="135" alt="Course Logo" src="` + image + `">
-            <br>
-            <label style="font-weight: bold; font-size: 18px">` + title + `</label>
-            <label style="font-weight: lighter">` + author + `</label>
-            <label style="font-weight: bold; font-size: 15px">` + price + `</label>
-        </div>
-        `;
+        let CourseHTML = createCourseHTML(image,title,author,price);
 
         courseDiv.innerHTML += CourseHTML;
       })
@@ -25,12 +38,20 @@ fetch('http://localhost:3000/courses')
 })
 
 
+
+
 const searchButtonPressed = () => {
     let search = document.getElementById("search-bar").value;
     courseDiv = document.getElementById("course-list");
     courseDiv.innerHTML = ""
 
-    fetch('http://localhost:3000/courses')
+    renderCourse(search);
+
+}
+
+
+const renderCourse = (searchtext) => {
+    fetch(fetchurl)
     .then(res => res.json())
     .then((json) => {
 
@@ -41,23 +62,13 @@ const searchButtonPressed = () => {
             let author = value["author"];
             let price = value["price"];
 
-            let CourseHTML = `
-            <div class="course-element">
-                <img width="240" height="135" alt="Course Logo" src="` + image + `">
-                <br>
-                <label style="font-weight: bold; font-size: 18px">` + title + `</label>
-                <label style="font-weight: lighter">` + author + `</label>
-                <label style="font-weight: bold; font-size: 15px">` + price + `</label>
-            </div>
-            `;
+            let CourseHTML = createCourseHTML(image,title,author,price);
 
-            if(title.toLowerCase().includes(search.toLowerCase())){
+            if(title.toLowerCase().includes(searchtext.toLowerCase())){
                 courseDiv.innerHTML += CourseHTML;
             }
-
 
           })
 
     })
 }
-

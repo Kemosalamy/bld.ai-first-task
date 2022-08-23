@@ -8,14 +8,14 @@
         <title>Udemy-Like Website</title>
     </head>
     <body class="main-body-style">
-        <div class="nav-bar">
+        <nav class="nav-bar">
             <div class="padding">&nbsp;</div>
             <label class="mobile-dropdown">☰</label>
             <img class="udemy-logo" alt="Udemy Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/512px-Udemy_logo.svg.png">
             <label class="nav-bar-links">Categories</label>
             <form name="searchForm" onsubmit="searchButtonPressed(); return false;" class="form-style">
                 <input id="search-bar" placeholder="Search for anything" class="search-bar" type="text">
-                <input onclick="searchButtonPressed()" class="search-button" type="button" value="Search">
+                <input onclick="searchButtonPressed()" class="search-button" type="submit" value="Search">
             </form>
             <label class="nav-bar-links" >Udemy Business</label>
             <label class="nav-bar-links" >Teach on Udemy</label>
@@ -24,7 +24,7 @@
             <input class="sign-up-button" type="button" value="Sign Up">
             <img class="globe-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Globe_icon.svg/2048px-Globe_icon.svg.png">
             <div class="padding">&nbsp;</div>
-        </div>
+        </nav>
         <div class="header-area">
             <div class="header-box">
                 <h1>New to Udemy? Lucky you.</h1>
