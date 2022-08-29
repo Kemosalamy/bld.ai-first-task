@@ -1,5 +1,6 @@
 const fetchurl = 'http://localhost:3000/c_'
 let topic = 'python';
+let searchinfo = '';
 let coursesPerGroup = 4;
 
 const createCourseDiv = (courseInfo) => {
@@ -115,17 +116,19 @@ const renderCourses = (subject,searchtext) => {
 }
 
 
-renderCourses(topic,'');
+renderCourses(topic,searchinfo);
 
 const searchButtonPressed = () => {
     let search = document.getElementById("search-bar").value;
-    renderCourses(topic,search);
+    searchinfo = search;
+    renderCourses(topic,searchinfo);
 
 }
 
 
 const switchCourses = (label) => {
     topic = label;
+    searchinfo = '';
 
     document.getElementById('python').className='idle-topic';
     document.getElementById('excel').className='idle-topic';
@@ -136,5 +139,38 @@ const switchCourses = (label) => {
     document.getElementById('draw').className='idle-topic';
 
     document.getElementById(label).className='highlighted-topic';
-    renderCourses(label,'');
+    renderCourses(topic,searchinfo);
 }
+
+let size1 = window.matchMedia("(max-width: 599px)")
+let size3 = window.matchMedia("(min-width: 600px) and (max-width: 900px)")
+let size4 = window.matchMedia("(min-width: 901px)")
+
+function size1Carousel(x) {
+    if (x.matches) {
+      coursesPerGroup = 1;
+      renderCourses(topic,searchinfo);
+    }
+}
+
+function size3Carousel(x) {
+    if (x.matches) {
+      coursesPerGroup = 3;
+      renderCourses(topic,searchinfo);
+    }
+}
+
+function size4Carousel(x) {
+    if (x.matches) {
+      coursesPerGroup = 4;
+      renderCourses(topic,searchinfo);
+    }
+}
+
+size1Carousel(size1);
+size3Carousel(size3);
+size4Carousel(size4);
+
+size1.addListener(size1Carousel)
+size3.addListener(size3Carousel)
+size4.addListener(size4Carousel)
