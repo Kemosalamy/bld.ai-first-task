@@ -109,8 +109,7 @@ const renderCourses = (subject,searchtext) => {
     .then(res => res.json())
     .then((json) => {
         let courseContent = createCourseHTML(json,searchtext);
-        courseDiv.innerHTML += courseContent;
-
+        courseDiv.innerHTML = courseContent;
     })
 
 }
