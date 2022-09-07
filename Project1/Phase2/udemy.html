@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Udemy-Like Website</title>
+    </head>
+    <body class="main-body-style">
+        <nav class="nav-bar">
+            <div class="padding">&nbsp;</div>
+            <label class="mobile-dropdown">☰</label>
+            <img class="udemy-logo" alt="Udemy Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/512px-Udemy_logo.svg.png">
+            <label class="nav-bar-links">Categories</label>
+            <form name="searchForm" onsubmit="searchButtonPressed(); return false;" class="form-style">
+                <input id="search-bar" placeholder="Search for anything" class="search-bar" type="text">
+                <input onclick="searchButtonPressed()" class="search-button" type="submit" value="Search">
+            </form>
+            <label class="nav-bar-links" >Udemy Business</label>
+            <label class="nav-bar-links" >Teach on Udemy</label>
+            <img class="shopping-cart" src="https://www.iconpacks.net/icons/2/free-shopping-cart-icon-3041-thumb.png" >
+            <input class="log-in-button" type="button" value="Log In">
+            <input class="sign-up-button" type="button" value="Sign Up">
+            <img class="globe-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Globe_icon.svg/2048px-Globe_icon.svg.png">
+            <div class="padding">&nbsp;</div>
+        </nav>
+        <div class="header-area">
+            <div class="header-box">
+                <h1>New to Udemy? Lucky you.</h1>
+                <p>Courses start at E£169.99. Get your new-student offer before it expires.</p>
+            </div>
+        </div>
+        <div class="mobile-header">
+            <h1>New to Udemy? Lucky you.</h1>
+            <p>Courses start at E£169.99. Get your new-student offer before it expires.</p>
+        </div>
+
+        <div class="content">
+            <h1>A broad selection of courses</h1>
+            <h3 style="font-weight: lighter">Choose from 185,000 online video courses with new additions published every month</h3>
+            <div class="course-types">
+                <label style="color: black">Python</label>
+                <label>Excel</label>
+                <label>Web Development</label>
+                <label>Javascript</label>
+                <label>Drawing</label>
+            </div>
+            <div class="courses-overview">
+                <h2 style="font-size: 25px">Expand your career opportunities with Python</h2>
+                <h3 style="font-weight: lighter; font-size: 18px">
+                    Take one of Udemy’s range of Python courses and
+                    learn how to code using this incredibly useful language. Its simple syntax and
+                    readability makes Python perfect for Flask, Django, data science, and machine learning.
+                    You’ll learn how to build everything from games to sites to apps. Choose from a range
+                    of courses that will appeal to...
+                </h3>
+                <input class="explore-python-button" type="button" value="Explore Python">
+                <br>
+                <br>
+                <div id="course-list" class="course-list">
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+    <br>
+    <br>
+    <br>
+
+</html>
