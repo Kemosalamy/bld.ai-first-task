@@ -228,6 +228,16 @@ code {
   border: 1px solid #1c1d1f;
 }
 
+.explore-udemy-button {
+
+  height: 40px;
+  font-weight: bold;
+  width: 80%;
+  background-color: white;
+  color: #1c1d1f;
+  border: 1px solid #1c1d1f;
+}
+
 .course-element {
   height: 100%;
 }
@@ -288,6 +298,28 @@ flex-direction: column;
   width: 100%;
   background-color: #3e4143;
 }
+
+.course-inclusion {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.try-udemy {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.course-options {
+  font-weight: bold;;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-decoration-line: underline;
+}
+
 
 .top-flex {
   width: 55%;

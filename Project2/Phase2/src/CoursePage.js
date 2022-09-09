@@ -42,8 +42,38 @@ function CoursePage(){
                     <button className='add-cart-button'>Add to Cart</button>
                     <button className='buy-now-button'>Buy Now</button>
                     <label style={{fontWeight: 'lighter'}}>30-Day Money-Back Guarantee</label>
-
                 </span>
+                <br/>
+
+                <div className='course-inclusion'>
+                    <span style={{fontWeight: 'bold'}}>This course includes:</span>
+                    <ul>
+                        <li>14 hours on-demand video</li>
+                        <li>1 article</li>
+                        <li>3 downloadable resources</li>
+                        <li>Full lifetime access</li>
+                        <li>Access on mobile and TV</li>
+                        <li>Certificate of completion</li>
+                    </ul>
+                </div>
+
+                <div className='course-options'>
+                    <label>Share</label>
+                    <label>Gift this course</label>
+                    <label>Apply Coupon</label>
+                </div>
+
+                <hr/>
+
+                <h5 style={{fontWeight: 'bold' ,paddingLeft: '10%', paddingRight:'10%'}}>Training 5 or more people?</h5>
+                <p style={{fontWeight: 'lighter' ,paddingLeft: '10%', paddingRight: '10%'}}>
+                    Get your team access to 17,000+ top Udemy courses anytime, anywhere.
+                </p>
+                <div className='try-udemy'>
+                    <button className='explore-udemy-button'>Try Udemy Business</button>
+                </div>
+                <br/>
+
 
             </div>
             <div className='course-front-bg'>
