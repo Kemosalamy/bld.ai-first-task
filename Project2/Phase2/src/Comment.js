@@ -30,6 +30,7 @@ function Comment({initials, name, date, stars, comment }){
                     {<span style={{color: 'gray'}}>{date}</span>}
                 </span>
                 {comment}
+                <br/>
                 <label style={{ fontSize: '13px', fontWeight: 'lighter'}}>Was this review helpful?</label>
                 <br/>
                 <br/>

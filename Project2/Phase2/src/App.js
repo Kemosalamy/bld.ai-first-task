@@ -14,13 +14,16 @@ export const StateContext = createContext();
 function App() {
   const [courseInfo, setCourseInfo] = useState(null);
   const [currentCourse, setCurrentCourse] = useState(null);
+  const [searchText, setSearchText] = useState('')
   const fetchurl = 'http://localhost:3500/courses_info'
 
   let WebsiteState = {
     courseInfo,
     currentCourse,
+    searchText,
     setCourseInfo,
     setCurrentCourse,
+    setSearchText,
   }
 
   useEffect(() => {

@@ -6,21 +6,30 @@ import './style.css';
 function Navbar({location}){
 
     const navigate = useNavigate();
-    const [searchText, setSearchText] = useState('');
+    const WebsiteState = useContext(StateContext);
+    const [localText, setLocalText] = useState('');
+
 
     const handleSearch = (e) => {
         e.preventDefault();
-        navigate('/?search=' + searchText);
+        WebsiteState.setSearchText(localText);
+        navigate('/?search=' + WebsiteState.searchText);
+    }
+
+    const backToHome = () => {
+        setLocalText('');
+        WebsiteState.setSearchText('');
+        navigate('/')
     }
 
     return (
         <nav className='nav-bar'>
             <div className='padding'>&nbsp;</div>
             <label className='mobile-dropdown'>☰</label>
-            <img className='udemy-logo' onClick={() => navigate('/')} alt="Udemy Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/512px-Udemy_logo.svg.png"/>
+            <img className='udemy-logo' onClick={() => {backToHome()}} alt="Udemy Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/512px-Udemy_logo.svg.png"/>
             <label className='nav-bar-links'>Categories</label>
             <form name='searchForm' onSubmit={handleSearch} className='form-style'>
-                <input id="search-bar" value={searchText} onChange={(e) => setSearchText(e.target.value)} placeholder="Search for anything" className='search-bar' type="text"/>
+                <input id="search-bar" defaultValue={localText} onChange={(e) => {setLocalText(e.target.value)}} placeholder="Search for anything" className='search-bar' type="text"/>
                 <input className='search-button' type="submit" value="Search"/>
             </form>
             <label className='nav-bar-links' >Udemy Business</label>

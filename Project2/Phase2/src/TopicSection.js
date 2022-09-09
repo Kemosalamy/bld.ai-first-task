@@ -1,9 +1,12 @@
 import './style.css';
 import CourseCard from './CourseCard';
-
+import { StateContext } from "./App";
+import { createContext, useContext, useState, useTransition } from 'react';
 function TopicSection({topicInfo}) {
+    const WebsiteState = useContext(StateContext);
 
 return (
+
     <div className='content' >
         <div className='courses-overview'>
             <h2 style={{fontSize: "25px"}}>
@@ -19,7 +22,8 @@ return (
             <br/>
             <div className='courses-list'>
                 {topicInfo.courses.map((element,index) => {
-                    return <CourseCard courseInfo={element} />
+                    if(element.title.toLowerCase().includes(WebsiteState.searchText))
+                        return <CourseCard courseInfo={element} />
                 })}
             </div>
 
